@@ -1,0 +1,23 @@
+# Dataset schema contract (example defaults for CICIDS-style CSVs)
+dataset:
+  label_column: Label
+  id_columns:
+    - Flow ID
+    - Source IP
+    - Destination IP
+    - Timestamp
+labels:
+  benign_values:
+    - BENIGN
+    - Benign
+    - benign
+  normalize_whitespace: true
+preprocess:
+  drop_exact_duplicates: true
+  drop_rows_with_missing_label: true
+  coerce_numeric: true
+split:
+  seed: 42
+  test_size: 0.2
+  val_size: 0.2
+  stratify: true

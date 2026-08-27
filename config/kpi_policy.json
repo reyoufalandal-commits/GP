@@ -1,0 +1,13 @@
+{
+  "macro_f1_min": 0.75,
+  "rare_class_f1_min": 0.8,
+  "rare_classes": [
+    "PortScan",
+    "Web Attack \ufffd Brute Force",
+    "FTP-Patator",
+    "DoS slowloris"
+  ],
+  "unknown_recall_external_min": 0.14,
+  "known_alert_rate_max": 0.08,
+  "max_alert_rate_external": 0.12
+}

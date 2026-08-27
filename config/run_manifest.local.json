@@ -1,0 +1,20 @@
+{
+  "manifest_version": "1.0",
+  "seed": 42,
+  "paths": {
+    "input_val": "data/processed/val.csv",
+    "binary_bundle": "artifacts/hawk-eye-binary",
+    "supervised_bundle": "artifacts/hawk-eye-sup",
+    "anomaly_bundle": "artifacts/hawk-eye-anomaly-ae-tuned",
+    "triage_thresholds": "reports/thresholds_fusion_selected.json",
+    "scorecard": "reports/final_rare_scorecard.json"
+  },
+  "required_reports": [
+    "reports/run_attack_uncertain_summary.json",
+    "reports/run_triage_summary.json",
+    "reports/production_readiness.json",
+    "reports/quality_iteration_report.json",
+    "reports/kpi_gate.json"
+  ],
+  "notes": "Canonical local manifest for reproducible train/eval/triage acceptance."
+}

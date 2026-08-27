@@ -1,0 +1,21 @@
+{
+  "threshold_change_policy": {
+    "required_approvers": 1,
+    "roles": ["ml_owner", "soc_lead"],
+    "require_rollback_plan": true
+  },
+  "retrain_policy": {
+    "max_days_without_retrain": 30,
+    "drift_trigger_attack_uncertain_rate": 0.3,
+    "drift_trigger_schema_change": true
+  },
+  "llm_policy": {
+    "llm_is_advisory_only": true,
+    "require_rag_citations": true,
+    "redact_sensitive_fields": true
+  },
+  "incident_policy": {
+    "on_llm_failure": "fallback_to_ml_only",
+    "on_model_failure": "alert_on_call_and_rollback_bundle"
+  }
+}
