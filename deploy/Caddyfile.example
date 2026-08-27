@@ -1,0 +1,10 @@
+# Example: TLS in front of Hawk-Eye API (127.0.0.1:8000).
+# Replace example.com and paths; see docs/DOCKER.md.
+
+example.com {
+    reverse_proxy 127.0.0.1:8000
+    header {
+        X-Content-Type-Options nosniff
+        X-Frame-Options DENY
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "description": "steady_baseline",
+  "phases": [
+    {
+      "profile": "steady_baseline",
+      "duration_sec": 8,
+      "rows_per_sec": 3,
+      "jitter_sec": 0.015
+    }
+  ]
+}

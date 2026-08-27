@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "description": "classroom_full_menu: normal baseline then varied synthetic patterns",
+  "phases": [
+    {
+      "profile": "steady_baseline",
+      "total_lines": 80,
+      "duration_sec": 25,
+      "jitter_sec": 0.02,
+      "ts_step": 0.012
+    },
+    {
+      "profile": "benign_web",
+      "total_lines": 40,
+      "duration_sec": 12,
+      "jitter_sec": 0.025,
+      "ts_step": 0.01
+    },
+    {
+      "profile": "dns_like_udp",
+      "total_lines": 35,
+      "duration_sec": 10,
+      "jitter_sec": 0.03,
+      "ts_step": 0.015
+    },
+    {
+      "profile": "heavy_transfer",
+      "total_lines": 20,
+      "duration_sec": 12,
+      "jitter_sec": 0.04,
+      "ts_step": 0.02
+    },
+    {
+      "profile": "vertical_scan",
+      "total_lines": 55,
+      "duration_sec": 14,
+      "jitter_sec": 0.015,
+      "ts_step": 0.008
+    },
+    {
+      "profile": "horizontal_scan",
+      "total_lines": 45,
+      "duration_sec": 12,
+      "jitter_sec": 0.02,
+      "ts_step": 0.01
+    },
+    {
+      "profile": "beacon_like",
+      "total_lines": 30,
+      "duration_sec": 18,
+      "jitter_sec": 0.03,
+      "ts_step": 0.25
+    },
+    {
+      "profile": "noisy_then_scan",
+      "total_lines": 50,
+      "duration_sec": 20,
+      "jitter_sec": 0.02,
+      "ts_step": 0.01
+    },
+    {
+      "profile": "mixed_attack_mix",
+      "total_lines": 70,
+      "duration_sec": 25,
+      "jitter_sec": 0.02,
+      "ts_step": 0.012
+    },
+    {
+      "profile": "steady_baseline",
+      "total_lines": 40,
+      "duration_sec": 15,
+      "jitter_sec": 0.02,
+      "ts_step": 0.015
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "description": "quiet_then_burst",
+  "phases": [
+    {
+      "profile": "benign_web",
+      "total_lines": 15,
+      "ts_step": 0.05,
+      "jitter_sec": 0.01
+    },
+    {
+      "profile": "heavy_transfer",
+      "total_lines": 25,
+      "jitter_sec": 0.005,
+      "ts_step": 0.003,
+      "burst": { "every_n_lines": 5, "gap_sec": 0.4 }
+    }
+  ]
+}

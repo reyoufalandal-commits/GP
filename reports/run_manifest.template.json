@@ -1,0 +1,12 @@
+{
+  "created_utc": "",
+  "git_commit": "",
+  "max_rows": 400000,
+  "label_col": "Label",
+  "build_splits_seed": 42,
+  "sklearn_bundle": "artifacts/hawk-eye-kaggle-YYYYMMDD-HHMM",
+  "torch_bundle": "artifacts/hawk-eye-torch-YYYYMMDD-HHMM",
+  "metrics_sklearn": "reports/metrics_val_kaggle.json",
+  "metrics_torch": "reports/metrics_val_kaggle_torch.json",
+  "notes": "Copy to run_manifest.json per experiment. Use the same MAX_ROWS for sklearn and torch pipelines when comparing."
+}

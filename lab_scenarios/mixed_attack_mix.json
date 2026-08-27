@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "description": "mixed_attack_mix",
+  "phases": [
+    {
+      "profile": "mixed_attack_mix",
+      "total_lines": 60,
+      "jitter_sec": 0.02,
+      "ts_step": 0.01
+    }
+  ]
+}

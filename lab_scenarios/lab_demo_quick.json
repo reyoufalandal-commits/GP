@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "description": "lab_demo_quick",
+  "phases": [
+    {
+      "profile": "mixed",
+      "total_lines": 35,
+      "jitter_sec": 0.01
+    }
+  ]
+}

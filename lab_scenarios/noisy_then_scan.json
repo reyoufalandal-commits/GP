@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "description": "noisy_then_scan",
+  "phases": [
+    {
+      "profile": "benign_web",
+      "total_lines": 45,
+      "jitter_sec": 0.01,
+      "ts_step": 0.012
+    },
+    {
+      "profile": "vertical_scan",
+      "duration_sec": 4,
+      "rows_per_sec": 12,
+      "jitter_sec": 0.005
+    }
+  ]
+}
