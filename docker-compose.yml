@@ -1,0 +1,14 @@
+services:
+  hawk-eye:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      HAWK_EYE_CORS_ORIGINS: ${HAWK_EYE_CORS_ORIGINS:-http://127.0.0.1:8000,http://localhost:8000}
+    volumes:
+      - hawk_eye_data:/app/data
+      - ./artifacts:/app/artifacts:ro
+    # For production, set HAWK_EYE_ENV=production and HAWK_EYE_INITIAL_ADMIN_PASSWORD via secrets.
+
+volumes:
+  hawk_eye_data:

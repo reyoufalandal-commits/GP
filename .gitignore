@@ -1,0 +1,75 @@
+/.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+
+# test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# runtime stream outputs (Parquet + state; can grow large)
+/data/stream_sessions/
+
+# auto-generated lab stream config (machine-specific paths)
+/data/lab/stream_lab.generated.json
+/data/lab/hawk_eye_stream_env.sh
+# synthetic Zeek conn.log from lab sim (can be huge; regenerate locally)
+/data/lab/*.log
+/config/generated_stream_lab.json
+/data/uploads/
+/data/exports/
+
+# Zeek live conn.log (can grow; recreated by capture script)
+/data/live/*.log
+
+# Node (if tools run at repo root)
+/node_modules/
+
+# local ML checkpoints / exports (root; keep explicit allows if needed)
+/*.pt
+/*.pth
+/*.onnx
+/*.npy
+/*.npz
+
+# secrets
+.env
+kaggle.json
+
+# data (never commit large datasets)
+/data/db/
+/data/raw/
+/data/interim/
+/data/processed/
+/kaggleData/
+
+# model artifacts (versioned bundles)
+/artifacts/hawk-eye-*/
+/artifacts/current
+/artifacts/current_anomaly
+
+# reports (keep metrics small; figures optional)
+/reports/*
+!/reports/run_manifest.template.json
+
+# local scoring outputs (root)
+/scored.parquet
+/novel_scored*.parquet
+/soc_scored.parquet
+/tmp*_binary.csv
+
+# local LLM and external datasets (large)
+/LLM/
+/UNSWNB15csv/
+
+# local calibrator and retrieval artifacts
+/artifacts/rag/
+/artifacts/novelty_calibrator_unsw/
+
+# notebooks checkpoints
+.ipynb_checkpoints/
+mash-it-up.ipynb

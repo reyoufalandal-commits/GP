@@ -1,0 +1,10 @@
+# Optional overlay: expose host Zeek / lab conn logs into the container.
+# Usage: docker compose -f docker-compose.yml -f docker-compose.lab.yml up
+#
+# Create ./data/live or ./data/lab on the host first; Zeek remains host-side (see docs/DOCKER.md).
+
+services:
+  hawk-eye:
+    volumes:
+      - ./data/live:/app/data/live
+      - ./data/lab:/app/data/lab
