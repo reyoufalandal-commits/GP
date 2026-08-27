@@ -1,0 +1,4 @@
+{"title":"Brute Force Authentication Pattern","family":"BruteForce","source":"internal_runbook_auth","text":"Repeated failed authentication attempts from one source to many targets. High connection count with low payload and short intervals."}
+{"title":"Port Scan Behavior","family":"PortScan","source":"internal_runbook_network","text":"Single source probing many destination ports and hosts within short time windows. Often low bytes and high fan-out."}
+{"title":"Command and Control Beaconing","family":"C2Beacon","source":"mitre_t1071","text":"Regular periodic outbound connections to rare destinations with consistent packet size and timing."}
+{"title":"DDoS-like Traffic Burst","family":"DDoS","source":"internal_runbook_ddos","text":"High-rate traffic bursts targeting one service from many origins, elevated flow counts and sustained throughput spikes."}

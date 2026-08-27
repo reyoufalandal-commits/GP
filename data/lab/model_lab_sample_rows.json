@@ -1,0 +1,26 @@
+[
+  {
+    "Protocol": 6,
+    "Flow Duration": 12.5,
+    "Total Fwd Packets": 4,
+    "Total Backward Packets": 3,
+    "Flow Bytes/s": 1200.0,
+    "Flow Packets/s": 0.56
+  },
+  {
+    "Protocol": 17,
+    "Flow Duration": 2.15,
+    "Total Fwd Packets": 12,
+    "Total Backward Packets": 8,
+    "Flow Bytes/s": 850.0,
+    "Flow Packets/s": 9.3
+  },
+  {
+    "Protocol": 0.5235,
+    "Flow Duration": 5.220869,
+    "Total Fwd Packets": 3.790243,
+    "Total Backward Packets": -5.967138,
+    "Flow Bytes/s": 4.288851,
+    "Flow Packets/s": -5.596973
+  }
+]
