@@ -9,7 +9,7 @@ description = "Local-first IDS ML pipeline (M1-friendly)."
 readme = "README.md"
 requires-python = ">=3.11,<3.14.4"
 dependencies = [
-  "numpy==2.2.3",
+  "numpy==2.4.6",
   "pandas==2.2.3",
   "scikit-learn==1.6.1",
   "joblib==1.4.2",
