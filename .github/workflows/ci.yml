@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install package and dev deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Minimal CI model bundles
+        run: python scripts/ci_build_minimal_bundles.py
+
+      - name: Pytest
+        run: pytest -q
+
+  dashboard-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install package and dev deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Minimal CI model bundles
+        run: python scripts/ci_build_minimal_bundles.py
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: dashboard/frontend/package-lock.json
+
+      - name: Install dashboard deps
+        working-directory: dashboard/frontend
+        run: npm ci
+
+      - name: Build dashboard
+        working-directory: dashboard/frontend
+        run: npm run build
+
+      - name: Install Playwright Chromium
+        working-directory: dashboard/frontend
+        run: npx playwright install --with-deps chromium
+
+      - name: Playwright smoke
+        working-directory: dashboard/frontend
+        env:
+          CI: true
+          PLAYWRIGHT_PYTHON: python
+        run: npm run test:e2e
